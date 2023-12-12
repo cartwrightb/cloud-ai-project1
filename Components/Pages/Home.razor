@@ -1,0 +1,19 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Computer Vision</h1>
+
+<p>Insert URL or type prompt: </p>
+
+<textarea @bind="urlOrPrompt" rows="1" cols="50" placeholder="Enter url to analyze or prompt text to analyze image"></textarea>
+<button @onclick="">Analyze Image</button>
+
+@code
+{
+    string urlOrPrompt = "";
+    void OnInput(ChangeEventArgs e)
+    {
+        urlOrPrompt = e.Value.ToString();
+    }
+}
